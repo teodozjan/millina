@@ -2,6 +2,9 @@
 # have tourists and residents. We are not interested in
 # storing any information here it should be stored in
 # departments to provide consistency
+class PersonId{
+has $.dnaChecksum;
+}
 
 class Person{
   has PersonId $.id;

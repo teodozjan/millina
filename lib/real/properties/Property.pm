@@ -4,6 +4,13 @@
 # Logic is not the thing that we expect to have because animal
 # cannot perform legal actions. Other things do not count.
 #
+
+class PropertyId{
+
+}
+
 class Property{
 	has PropertyId $.id;
 }
+
+

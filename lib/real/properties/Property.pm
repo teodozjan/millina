@@ -5,12 +5,12 @@
 # cannot perform legal actions. Other things do not count.
 #
 
-class PropertyId{
+class Real::PropertyId{
 
 }
 
-class Property{
-	has PropertyId $.id;
+class Real::Property{
+	has Real::PropertyId $.id;
 }
 
 

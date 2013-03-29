@@ -2,12 +2,12 @@
 # have tourists and residents. We are not interested in
 # storing any information here it should be stored in
 # departments to provide consistency
-class PersonId{
+class Real::PersonId{
 has $.dnaChecksum;
 }
 
-class Person{
-  has PersonId $.id;
+class Real::Person{
+  has Real::PersonId $.id;
   has $!ownLogic;
 
 }

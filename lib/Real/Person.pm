@@ -4,16 +4,13 @@
 
 use Real::PersonId;
 use Real::HumanLogic;
+use Real::Relation;
 
 #| This class will contain people relations
 class Real::Person{
   has Real::PersonId $.id;
   has Real::HumanLogic $.ownLogic;
 
-  has Real::PersonId $!bioFather;
-  has Real::PersonId $!bioMother;
-
-  has Real::PersonId $!partner;
-  has Real::PersonId @!children;
+  has Real::Relation @!relations;
 
 }

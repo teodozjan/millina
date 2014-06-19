@@ -2,4 +2,4 @@ use v6;
 
 role Area;
 
-multi method in_area(Area $area){...}
+multi method overlap(Area $area --> Bool) {False}

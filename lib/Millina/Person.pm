@@ -1,3 +1,5 @@
+use v6;
+
 use Millina::Physical;
 use Millina::Need;
 

@@ -17,7 +17,7 @@ use Millina::Vector;
     $area.move($vector);
     
     my Rect $moved .= new(
-	x=> [0,5],
+	x => [0,5],
 	y => [4,7]
     );
 

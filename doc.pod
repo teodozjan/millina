@@ -2,7 +2,7 @@
 
 =head1 Simulation
 
-Model is very important. It must be as detailed as possible but not more becuase it will make impossible to illustrate how real system work.
+Model is very important. It must be as detailed as possible but not more...
 
 In this model I will borrow a litle from HLA IEEE 1516 but not all. I don't plan distributed system so there is no need to create separate RTI and all the world descriptions. Anyway it is so easy to inject objects into running perl6 application that even ontology is waste of time. No federates -- objects can have own logic.
 

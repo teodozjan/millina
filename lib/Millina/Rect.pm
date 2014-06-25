@@ -20,7 +20,7 @@ method scale(Real $r) {
     @!y[1] = @!y[1] * $r;
 }
 
-multi method overlap(Rect $area) {
+multi method overlap(Rect $area --> Bool) {
    
     for $area.x -> $x {
 	for $area.y ->  $y {

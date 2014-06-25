@@ -1,12 +1,15 @@
 use v6;
 use Test;
 
-plan 16;
+plan 2;
 
 use Millina::Rect;
 use Millina::Vector;
+use Millina::Target;
 
-{
+subtest {
+    plan 16;
+
     my Rect $area = Rect.new(
 	x => [-1,4],
 	y => [2,5],
@@ -33,10 +36,7 @@ use Millina::Vector;
 
     is_deeply($moved.x,  $scaled.x, 'Rect scale x axis');
     is_deeply($moved.y,  $scaled.y, 'Rect scale y axis');
-}
 
-
-{
     my Rect $big .= new(
 	x => [-10, +10],
 	y => [-10, +10]
@@ -94,6 +94,27 @@ use Millina::Vector;
 
     ok($big.overlap($corner_right), 'Big in Corner');
     ok($corner_right.overlap($big), 'Vice versa' );
-}
+}, 'Rectangles';
 
 
+subtest {
+    plan 3;
+
+    my Rect $corner_right .= new(
+	x => [+10, +10],
+	y => [+10, +10]
+	    ); 
+    class X does Object{};
+    my X $x1 .= new;
+    my X $x2 .= new;
+
+    my Target $target1 .= new(target => $x1);
+    my Target $target11 .= new(target => $x1);
+    my Target $target2 .= new(target => $x2);
+   
+    nok($target1.overlap($corner_right), 'Different types');
+
+    ok($target1.overlap($target11), 'Same objAT');
+    nok($target1.overlap($target2), 'Different instances of identical objects')
+
+}, 'Area';

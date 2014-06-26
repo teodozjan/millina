@@ -7,6 +7,7 @@ Model is very important. It must be as detailed as possible but not more...
 In this model I will borrow a litle from HLA IEEE 1516 but not RTI. 
 
 The simulation will be made of objects that will affect each other via interactions just like High Level Architecture does.
+
 Areas that were optional in HLA here will be base feature.
 
 =head2 Area
@@ -24,9 +25,17 @@ Planes overlap each other if at least one of vertex is above lower vertex of sec
        $rect2.y[0] <= $vertex.y >= $rect.y[1];
      }
 
+=head3 Target
+
+Target is special area of simulation that will match single object. I hope storing references will not give worse performance than using ObjAt. Anyway it will be easy to override overlap method... especilly if C<eqv> will start working on complex objects without any effort.
+
+=head3 Wildcard
+
+Wildcard is B<Area> that allows to interact with all objects.  
+
 =head2 Object 
 
-Bananabanana
+Unlike to HLA object it can be target of interactions. To achieve this every object must have list B<Area> objects. This list and its contents may change in any moment. So B<Simulation> 
 
 =head2 Interaction
 

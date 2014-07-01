@@ -1,11 +1,12 @@
 use v6;
 use Test;
 
-plan 2;
+plan 3;
 
 use Millina::Rect;
 use Millina::Vector;
 use Millina::Target;
+use Millina::Wildcard;
 
 subtest {
     plan 16;
@@ -117,4 +118,22 @@ subtest {
     ok($target1.overlap($target11), 'Same objAT');
     nok($target1.overlap($target2), 'Different instances of identical objects')
 
-}, 'Area';
+}, 'Target';
+
+
+subtest {
+    plan 2;
+
+    my Rect $rect .= new(
+	x => [+10, +10],
+	y => [+10, +10]
+	    ); 
+  
+   my Wildcard $w .= new;
+
+   ok($w.overlap($rect), 'Wildcard is everything');
+   nok($rect.overlap($w), 'Rectangle is not wildcard');
+
+
+
+}, 'Wildcard';

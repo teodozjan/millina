@@ -35,9 +35,22 @@ Wildcard is B<Area> that allows to interact with all objects.
 
 =head2 Object 
 
-Unlike to HLA object it can be target of interactions. To achieve this every object must have list B<Area> objects. This list and its contents may change in any moment. So B<Simulation> 
+     It is going to be quite some time before stone notices its disfiguring skin disease and starts to scratch, which is just as well.”
+     ― Terry Pratchett, Equal Rites
+
+=head3 Dead object
+
+Dead object is kind of object that is not producing any interaction. 
+
+=head3 Passive Object
+
+Passive object is not subscribed to any interaction.
+
+=head3 Active object
+
+Active object produces interaction
 
 =head2 Interaction
 
-Interaction has area of... bnana bnana
+Interaction will know what to do with its targets.
  

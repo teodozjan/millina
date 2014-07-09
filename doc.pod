@@ -37,8 +37,8 @@ Wildcard is B<Area> that allows to interact with all objects.
 
 =head2 Object 
 
-     "It is going to be quite some time before stone notices its disfiguring skin disease and starts to scratch,
-     which is just as well."
+     "It is going to be quite some time before stone notices its disfiguring skin disease
+     and starts to scratch, which is just as well."
      ― Terry Pratchett, Equal Rites
 
 Object can have attributes, object can create interactions, object can subscribe interactions.

@@ -39,18 +39,6 @@ Wildcard is B<Area> that allows to interact with all objects.
      which is just as well."
      ― Terry Pratchett, Equal Rites
 
-=head3 Dead object
-
-Dead object is kind of object that is not producing any interaction. 
-
-=head3 Passive Object
-
-Passive object is not subscribed to any interaction.
-
-=head3 Active object
-
-Active object produces interactions
-
 =head2 Interaction
 
 Interaction will know what to do with its targets.

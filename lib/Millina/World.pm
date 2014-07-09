@@ -1,4 +1,7 @@
 use v6;
+use Millina::Simulation;
+use Millina::Clock;
+use Millina::Interaction;
 
 class World does Simulation;
 
@@ -11,15 +14,10 @@ method end { $!clock.end }
 method step {
     die if self.end;
     self.tick;
-
-    for(self.objects -> $obj) {
-	$obj.live;	
-    }
 }
 
 method dispatch(Interaction $interaction) {
-    for(self.objects -> $obj) {	
-	$obj.notify;
+    for self.objects -> $obj {	
+	#$obj.notify;
     }
-
 }

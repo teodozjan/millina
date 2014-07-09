@@ -12,7 +12,9 @@ Areas that were optional in HLA here will be base feature.
 
 =head2 Area
 
-Position of object is not important for simulation but area that object come interaction with. Area is the maximum range that any objects may recieve or want to interact HLA simulation designers already knew that and introduced that as part of standard.
+Position of object is not important for simulation but area that object come interaction with. Area is the maximum range
+that any objects may recieve or want to interact HLA simulation designers already knew that and introduced that as part
+of standard.
 
 =head3 Rectangle
 
@@ -35,24 +37,17 @@ Wildcard is B<Area> that allows to interact with all objects.
 
 =head2 Object 
 
-     "It is going to be quite some time before stone notices its disfiguring skin disease and starts to scratch, which is just as well."
+     "It is going to be quite some time before stone notices its disfiguring skin disease
+     and starts to scratch, which is just as well."
      ― Terry Pratchett, Equal Rites
 
-=head3 Dead object
-
-Dead object is kind of object that is not producing any interaction. 
-
-=head3 Passive Object
-
-Passive object is not subscribed to any interaction.
-
-=head3 Active object
-
-Active object produces interactions
+Object can have attributes, object can create interactions, object can subscribe interactions.
+Creator can receive affected object list.
 
 =head2 Interaction
 
-Interaction will know what to do with its targets.
+Interaction is small object with data that is dispatched to all interested objects. Will return to creator with
+list of objects that were affected by it. This will allow find_object interaction.
  
 =head3 Subscribe
 
@@ -62,7 +57,7 @@ Subscription should not contain areas due to it can change a lot during simulati
 
 =head2 8 queens problem
 
-=head3 Objects: player, chessboard
+=head3 Objects: tiles of chessboard
 
 Every chessboard tile can have three states Free, Attacked and Hetman on
 

@@ -12,7 +12,9 @@ Areas that were optional in HLA here will be base feature.
 
 =head2 Area
 
-Position of object is not important for simulation but area that object come interaction with. Area is the maximum range that any objects may recieve or want to interact HLA simulation designers already knew that and introduced that as part of standard.
+Position of object is not important for simulation but area that object come interaction with. Area is the maximum range
+that any objects may recieve or want to interact HLA simulation designers already knew that and introduced that as part
+of standard.
 
 =head3 Rectangle
 
@@ -39,9 +41,13 @@ Wildcard is B<Area> that allows to interact with all objects.
      which is just as well."
      ― Terry Pratchett, Equal Rites
 
+Object can have attributes, object can create interactions, object can subscribe interactions.
+Creator can receive affected object list.
+
 =head2 Interaction
 
-Interaction will know what to do with its targets.
+Interaction is small object with data that is dispatched to all interested objects. Will return to creator with
+list of objects that were affected by it. This will allow find_object interaction.
  
 =head3 Subscribe
 

@@ -57,7 +57,7 @@ Subscription should not contain areas due to it can change a lot during simulati
 
 =head2 8 queens problem
 
-=head3 Objects: player, chessboard
+=head3 Objects: tiles of chessboard
 
 Every chessboard tile can have three states Free, Attacked and Hetman on
 

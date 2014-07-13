@@ -6,7 +6,8 @@ Model is very important. It must be as detailed as possible but not more...
 
 In this model I will borrow a litle from HLA IEEE 1516 but not RTI. 
 
-The simulation will be made of objects that will affect each other via interactions just like High Level Architecture does.
+The simulation will be made of objects that will affect each other via interactions just like High Level Architecture
+does.
 
 Areas that were optional in HLA here will be base feature.
 
@@ -29,7 +30,9 @@ Planes overlap each other if at least one of vertex is above lower vertex of sec
 
 =head3 Target
 
-Target is special area of simulation that will match single object. I hope storing references will not give worse performance than using ObjAt. Anyway it will be easy to override overlap method... especilly if C<eqv> will start working on complex objects without any effort.
+Target is special area of simulation that will match single object. I hope storing references will not give worse 
+performance than using ObjAt. Anyway it will be easy to override overlap method... especilly if C<eqv> will start
+working on complex objects without any effort.
 
 =head3 Wildcard
 
@@ -57,12 +60,24 @@ Subscription should not contain areas due to it can change a lot during simulati
 
 =head2 8 queens problem
 
-=head3 Objects: tiles of chessboard
+Objects: tiles of chessboard
 
 Every chessboard tile can have three states Free, Attacked and Hetman on
 
 Player is deciding when to end.
 
-=head3 Interactions: place queen, attack_fields, find_free
+Interactions: place queen, attack_fields, find_free
 
-Player place_queen in random space. All attacked fields are marked. New queen is taking place until no free fields are present.
+Player place_queen in random space. All attacked fields are marked. New queen is taking place until no free fields
+are present.
+
+=head2 Lane Assisstant
+
+It may be great fun to check whether earlier changing lane to one that right direction can be taken will reduce traffic jam.
+
+Objects: car, lane, traffic light
+
+Intearctions: light change, move?
+     
+     
+     

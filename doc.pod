@@ -19,7 +19,15 @@ of standard.
 
 =head3 Rectangle
 
-It was easy to use rectangle for simulation. It can be defined by only four numbers and it is trivial to define its overlaping. 
+       (x0,y1)  (x1,y1)
+          ---------
+         |         |
+         |         |
+         |         |
+          ---------
+      (x0,y0)     (x1,y0)
+
+It was easy to use rectangle for simulation. It can be defined by only four numbers and it is trivial to define its overlaping.
 
 Planes overlap each other if at least one of vertex is above lower vertex of second plane and below upper vertex corners. 
 
@@ -29,12 +37,21 @@ Planes overlap each other if at least one of vertex is above lower vertex of sec
      }
 
 =head3 Target
-
+             
 Target is special area of simulation that will match single object. I hope storing references will not give worse 
 performance than using ObjAt. Anyway it will be easy to override overlap method... especilly if C<eqv> will start
 working on complex objects without any effort.
 
+=head3 Family
+
+Type will target all objects of given type
+
+
 =head3 Wildcard
+
+    *****
+    *****
+    *****
 
 Wildcard is B<Area> that allows to interact with all objects.  
 
@@ -64,7 +81,7 @@ Objects: tiles of chessboard
 
 Every chessboard tile can have three states Free, Attacked and Hetman on
 
-Player is deciding when to end.
+Player actor is deciding when to end.
 
 Interactions: place queen, attack_fields, find_free
 

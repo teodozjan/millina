@@ -2,6 +2,6 @@ use v6;
 
 use Millina::Interaction;
 
-role Object;
+role Millina::Object;
 
-multi method interact(Interaction $interaction) {...}
+multi method interact(Millina::Interaction $interaction) {...}

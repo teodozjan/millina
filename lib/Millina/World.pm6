@@ -3,9 +3,9 @@ use Millina::Simulation;
 use Millina::Clock;
 use Millina::Interaction;
 
-class World does Simulation;
+class Millina::World does Millina::Simulation;
 
-has Clock $.clock;
+has Millina::Clock $.clock;
 
 method go {self.step until self.end}
 
@@ -16,7 +16,7 @@ method step {
     self.tick;
 }
 
-method dispatch(Interaction $interaction) {
+method dispatch(Millina::Interaction $interaction) {
     for self.objects -> $obj {	
 	#$obj.notify;
     }

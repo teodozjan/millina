@@ -2,10 +2,10 @@ use v6;
 use Millina::Area;
 use Millina::Object;
 
-class Target does Area;
+class Millina::Target does Millina::Area;
 
-has Object $.target;
+has Millina::Object $.target;
 
-multi method overlap(Target $area --> Bool) {
+multi method overlap(Millina::Target $area --> Bool) {
     $!target === $area.target;
 }

@@ -1,25 +1,27 @@
 use v6;
 use Test;
 
+plan 1;
+
+
 use Millina::Simulation;
 use Millina::Object;
 
-plan 1;
 
 enum State <Free Attacked Hetman>;
 
-class Player is Object{
+class Player does Millina::Object{
 
 }
 
-class Tile {
+class Tile does Millina::Object{
     has $.state;
 }
 
-class HetmanSimulation does Simulation {
+class HetmanSimulation does Millina::Simulation {
 
-    method start {
-        my $startx = a..h.pick;
+    method go {
+        my $startx = 'a'..'h'.pick;
         my $starty = 1..8.pick;
     }
 }
@@ -27,9 +29,9 @@ class HetmanSimulation does Simulation {
 my $simulation = HetmanSimulation.new;
 $simulation.register(Player.new);
 
-for 1..8 -> $y { 
-    for a..h -> $x {
-         $simulation.register($tile.new(x => $x, y => $y, state=> Free));
+for (1..8) -> $y { 
+    for ('a'..'h') -> $x {
+         $simulation.register(Tile.new(x => $x, y => $y, state=> Free));
     }
 }
-ok(False);
+ok($simulation);

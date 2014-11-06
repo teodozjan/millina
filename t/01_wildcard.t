@@ -6,11 +6,7 @@ use Millina::Wildcard;
 
 plan 2;
 
-my $rect = Millina::Rect.new(
-    x => [+10, +10],
-    y => [+10, +10]
-    ); 
-
+my $rect = Millina::Rect.new(x=>[10,10],y=>[10,10]); 
 my Millina::Wildcard $w = Millina::Wildcard.new;
 
 ok($w.overlap($rect), 'Millina::Wildcard is everything');

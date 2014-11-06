@@ -1,5 +1,5 @@
 use v6;
 
-role Area;
+role Millina::Area;
 
-multi method overlap(Area $area --> Bool) {False}
+multi method overlap(Millina::Area $area --> Bool) {False}

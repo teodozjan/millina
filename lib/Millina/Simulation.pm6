@@ -3,18 +3,18 @@ use v6;
 use Millina::Object;
 use Millina::Interaction;
 
-role Simulation;
+role Millina::Simulation;
 
-has Object @.objects;
-has Interaction @.events;
+has Millina::Object @.objects;
+has Millina::Interaction @.events;
 
 method go {...}
 
 
-multi method register(Object $object){
+multi method register(Millina::Object $object){
     @!objects.push($object);
 }
 
-method propagate_interaction(Interaction $interaction){
+method propagate_interaction(Millina::Interaction $interaction){
     @!objects.>>.receive_interaction($interaction);
 }

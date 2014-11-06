@@ -1,12 +1,12 @@
 use v6;
 
-role Clock {
+role Millina::Clock {
     method tick {...}
     method end returns Bool {...}
 
 }
 
-class SimpleClock does Clock {
+class Millina::SimpleClock does Millina::Clock {
 
     has $.moment = 0;
     has $.limit = 1;

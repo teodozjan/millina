@@ -1,6 +1,6 @@
 use v6;
 
-class Vector;
+class Millina::Vector;
 
 has Real $.x;
 has Real $.y;

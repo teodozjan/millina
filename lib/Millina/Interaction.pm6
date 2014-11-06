@@ -1,3 +1,3 @@
 use v6;
 
-role Interaction;
+role Millina::Interaction;

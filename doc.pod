@@ -96,5 +96,8 @@ Objects: car, lane, traffic light
 
 Intearctions: light change, move?
      
+=head2 Imperfect World
+
+Objects: People of various kinds(lazy,diligent, requiring motivation), goverments 
      
-     
+Interactions: ??? work, reproduction, efficency

@@ -3,7 +3,7 @@ use v6;
 use Millina::Area;
 use Millina::Rect;
 
-role Millina::Physical;
+unit role Millina::Physical;
 
 has Millina::Area $.location;
 

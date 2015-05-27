@@ -2,7 +2,7 @@ use v6;
 use Millina::Area;
 use Millina::Object;
 
-class Millina::Target does Millina::Area;
+unit class Millina::Target does Millina::Area;
 
 has Millina::Object $.target;
 

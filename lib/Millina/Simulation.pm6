@@ -3,7 +3,7 @@ use v6;
 use Millina::Object;
 use Millina::Interaction;
 
-role Millina::Simulation;
+unit role Millina::Simulation;
 
 has Millina::Object @.objects;
 has Millina::Interaction @.events;

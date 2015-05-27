@@ -3,7 +3,7 @@ use Millina::Simulation;
 use Millina::Clock;
 use Millina::Interaction;
 
-class Millina::World does Millina::Simulation;
+unit class Millina::World does Millina::Simulation;
 
 has Millina::Clock $.clock;
 

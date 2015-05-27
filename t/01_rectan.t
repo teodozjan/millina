@@ -17,8 +17,8 @@ my $moved = Millina::Rect.new(
     y => [4,7]
     );
 
-is_deeply($area.x,  $moved.x, 'Millina::Rect move x axis');
-is_deeply($area.y,  $moved.y, 'Millina::Rect move y axis');
+is-deeply($area.x,  $moved.x, 'Millina::Rect move x axis');
+is-deeply($area.y,  $moved.y, 'Millina::Rect move y axis');
  
 
     $moved.scale(0.5);
@@ -27,8 +27,8 @@ is_deeply($area.y,  $moved.y, 'Millina::Rect move y axis');
     y => [4, 3.5]
     ); 
 
-    is_deeply($moved.x,  $scaled.x, 'Millina::Rect scale x axis');
-    is_deeply($moved.y,  $scaled.y, 'Millina::Rect scale y axis');
+    is-deeply($moved.x,  $scaled.x, 'Millina::Rect scale x axis');
+    is-deeply($moved.y,  $scaled.y, 'Millina::Rect scale y axis');
 
     my $big = Millina::Rect.new(
 	x => [-10, +10],

@@ -3,7 +3,7 @@ use v6;
 use Millina::Area;
 use Millina::Vector;
 
-class Millina::Rect does Millina::Area;
+unit class Millina::Rect does Millina::Area;
 
 has Real @.x is rw;
 has Real @.y is rw;

@@ -1,0 +1,9 @@
+{
+    "name"        : "Millina",
+    "version"     : "*",
+    "author"	  : "github:teodozjan",
+    "description" : "Simulator of everything and all else",
+    "depends"     : [ ],
+    "provides"    : {"Millina::Area" : "lib/Millina/Area.pm6"},
+    "source-url"  : "git://github.com/teodozjan/millina.git"
+}

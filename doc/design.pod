@@ -1,0 +1,103 @@
+
+
+=head1 Simulation
+
+Model is very important. It must be as detailed as possible but not more...
+
+In this model I will borrow a litle from HLA IEEE 1516 but not RTI. 
+
+The simulation will be made of objects that will affect each other via interactions just like High Level Architecture
+does.
+
+Areas that were optional in HLA here will be base feature.
+
+=head2 Area
+
+Position of object is not important for simulation but area that object come interaction with. Area is the maximum range
+that any objects may recieve or want to interact HLA simulation designers already knew that and introduced that as part
+of standard.
+
+=head3 Rectangle
+
+       (x0,y1)  (x1,y1)
+          ---------
+         |         |
+         |         |
+         |         |
+          ---------
+      (x0,y0)     (x1,y0)
+
+It was easy to use rectangle for simulation. It can be defined by only four numbers and it is trivial to define its overlaping.
+
+Planes overlap each other if at least one of vertex is above lower vertex of second plane and below upper vertex corners. 
+
+     for $rect1.toVertex -> $vertex {
+       $rect2.x[0] <= $vertex.x >= $rect.x[1];
+       $rect2.y[0] <= $vertex.y >= $rect.y[1];
+     }
+
+=head3 Target
+             
+Target is special area of simulation that will match single object. I hope storing references will not give worse 
+performance than using ObjAt. Anyway it will be easy to override overlap method... especilly if C<eqv> will start
+working on complex objects without any effort.
+
+=head3 Family
+
+Type will target all objects of given type
+
+
+=head3 Wildcard
+
+    *****
+    *****
+    *****
+
+Wildcard is B<Area> that allows to interact with all objects.  
+
+=head2 Object 
+
+     "It is going to be quite some time before stone notices its disfiguring skin disease
+     and starts to scratch, which is just as well."
+     ― Terry Pratchett, Equal Rites
+
+Object can have attributes, object can create interactions, object can subscribe interactions.
+Creator can receive affected object list.
+
+=head2 Interaction
+
+Interaction is small object with data that is dispatched to all interested objects. Will return to creator with
+list of objects that were affected by it. This will allow find_object interaction.
+ 
+=head3 Subscribe
+
+Subscription should not contain areas due to it can change a lot during simulation. Area is argument of notify method.
+
+=head1 Use cases
+
+=head2 8 queens problem
+
+Objects: tiles of chessboard
+
+Every chessboard tile can have three states Free, Attacked and Hetman on
+
+Player actor is deciding when to end.
+
+Interactions: place queen, attack_fields, find_free
+
+Player place_queen in random space. All attacked fields are marked. New queen is taking place until no free fields
+are present.
+
+=head2 Lane Assisstant
+
+It may be great fun to check whether earlier changing lane to one that right direction can be taken will reduce traffic jam.
+
+Objects: car, lane, traffic light
+
+Intearctions: light change, move?
+     
+=head2 Imperfect World
+
+Objects: People of various kinds(lazy,diligent, requiring motivation), goverments 
+     
+Interactions: ??? work, reproduction, efficency

@@ -4,7 +4,7 @@
 
 Model is very important. It must be as detailed as possible but not more...
 
-In this model I will borrow a litle from HLA IEEE 1516 but not RTI. 
+In this model I will borrow a little from HLA IEEE 1516 but not RTI. 
 
 The simulation will be made of objects that will affect each other via interactions just like High Level Architecture
 does.
